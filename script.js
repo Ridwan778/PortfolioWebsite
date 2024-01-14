@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 ProjectsButton.click();
             };
             if (contacts.classList.contains('show')) {
-                var ContactsButton = document.querySelector('.View-Contaacts');
+                var ContactsButton = document.querySelector('.View-Contacts');
                 ContactsButton.click();
             };
             skills.classList.toggle('show');
