@@ -1,26 +1,103 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset = "utf-8"><meta>
-        <meta http-equiv = "width=device-width, intial scale=1.0">
-        <meta name ="viewport" content="width=device-width, intial scale=1.0">
-        <title> Ridwan's Website</title>
-        <link rel="stylesheet" href="styles.css"></link>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="width=device-width, initial scale=1.0">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Ridwan's Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
 
-    <body>
-        <header>
-            <h2 class = "logo">Ridwan.</span></h2>
-            <nav class = "navigation">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Portfolio</a>
-                <a href="#">Blog</a>
-                <a href="#">Contact</a>
-            </nav>
-        <a href="#" class="btn-talk">Let's Talk</a>
-        </header>
-        
+<body>
+    <header>
+        <h2 class="logo"><span>Ridwan.</span></h2>
+        <nav class="navigation">
+            <a href="./Resume(S M Ridwanul Haque).pdf">Resume</a>
+            <a href="#"class ='View-Projects'>Projects</a>
+            <a href="#"class ='View-Contacts'>Contacts</a>
+            <a href="#"class = View-Skills>Skills</a>
+        </nav>
+        <!-- <a href="#" class="btn-talk">Let's Talk</a> -->
+    </header>
 
-    </body>
+    <section class="about-me">
+        <div class="content">
+            <h2> <span>About Myself</span></h2>
+            <p>Hey there, a warm welcome to my corner of the web!  I'm currently in the final year of my computer science, with experience in front-end development and data visualization. 
+               When not coding, you'll find me immersed in chess strategies or playing arcade games.
+               Would love to hear about any opportunities in data science or software development!</p>
+            <div class="btn-group">
+                <!-- <a href="#">Resume</a>
+                <a href="#"class ='View-Projects'>Projects</a>
+                <a href="#"class ='Contacts'>Contacts</a>
+                <a href="#"class = Skills>Skills</a> -->
+            </div>
+        </div>
+    </section>
+
+    <h1 class = "project-header"> My Projects </h1>
+
+    <section class="projects">
+        <div class="content">
+            <h2><span>Flappy Bird</span></h2>
+            <p>Designed and developed an entertaining Flappy Bird game using the Pygame module, a Python library dedicated to game development.
+                Through this project, I skillfully incorporated dynamic flight animations, adding a visually captivating layer to the gaming experience. 
+                Moreover, I implemented realistic game physics, enhancing the overall feel of the gameplay and ensuring that users are treated to an immersive and enjoyable challenge.</p>
+            <div class="btn-group">
+                <a href="https://github.com/Ridwan778/Flappy-Bird"> View in Github</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="content">
+            <h2><span>Visualizing Food Price Hikes in Newfoundland</span></h2>
+            <p> Collected data from government websites about the constant rise in food prices for
+                Newfoundlanders during 2017-2022. Applied data processing methods to make it easier to visualize and showed
+                the final results in the form of a treemap using plotly library in python.
+            </p>
+            <div class="btn-group">
+                <a href="https://github.com/Ridwan778/Food-Price-Hike-Data-Visualisation"> View in Github</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="content">
+            <h2><span>Breakout</span></h2>
+            <p> Made a fun breakout game using HTML, CSS, and JavaScript.
+                The breakout game involved a paddle, ball, and bricks, 
+                and I implemented features like paddle movement, ball collisions, and score tracking.
+                I utilized HTML for structuring the game elements, CSS for styling and layout, 
+                and JavaScript for creating the game logic and interactivity.</p>
+            <div class="btn-group">
+                <a href="https://github.com/Ridwan778/Breakout-Game"> View in Github</a>
+            </div>
+        </div>
+    </section>
+
+    <section class = "contacts">
+        <div class="content"></div>
+            <h2><span>Contacts</span></h2>
+            <p><a href = "https://www.linkedin.com/in/s-m-ridwanul-haque">LinkedIn</a></p>
+            <p><a href = "mailto: sridwanul@mun.ca ">Email</a></p>
+            <p>+1 647-212-2825</p>
+        </div>
+    </section>
+
+    <section class = "skills">
+        <div class="content"></div>
+            <h2><span>Skills</span></h2>
+            <p>Programming Languages: Python, Javascript, Java, C#, and C++</p>
+            <p>Web Development: HTML, CSS, Three.js, and React</p>  
+            <p>Data Analysis and Visualization: Pandas, Sci-kit, Jupyter Notebooks and Git</p>
+            
+        </div>
+    </section>
+
+
+
+</body>
+
 </html>

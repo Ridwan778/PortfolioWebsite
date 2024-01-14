@@ -1,54 +1,116 @@
-@import url("http://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
 }
 
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-    z-index: 100;
+header {
+  color: #333;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-    font-size: 2em;
-    color: #555;
-    cursor: default;
+  font-size: 24px;
 }
 
-.navigation a{
-    font-size: 1.1em;
-    color: #555;
-    text-decoration: none;
-    margin-right: 40px;
-    font-weight: 500;
+.logo span {
+  color: #a83293;
 }
 
-.navigation a:hover{
-    color: #7d2ae8;
+.navigation {
+  display: flex;
 }
 
-.btn-talk{
-    color: #fff;
-    text-decoration: none;
-    padding: 8px 35px;
-    background: #7d2ae8;
-    border-radius: 10px;
-    border: 2px solid #7d2ae8;
-    font-weight: 500;
-    transition: .3s;
+.navigation a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 15px;
 }
 
-.btn-talk:hover{
-    color: #7d2ae8;
-    background: transparent;
+.btn-talk {
+  background-color: #a83293;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  
+}
+.btn-talk:hover {
+  background-color: #e000a4;
+}
+
+.projects, .project-header, .contacts, .skills {
+  display: none;
+  margin-top: 20px;
+}
+
+.projects.show, .project-header.show, .contacts.show, .skills.show {
+  display: block;
+}
+
+.projects.hide, .project-header.hide, .contacts.hide, .skills.hide {
+  display: none;
+}
+
+.about-me, .projects, .contacts, .skills {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.project-header {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  color: #a83293;
+}
+
+.about-me, .contacts, .skills {
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+.about-me h2, .projects h2, .contacts h2,.skills h2 {
+  color: #333;
+}
+
+.about-me span, .projects span, .contacts span, .skills h2 {
+  color: #a83293;
+}
+
+.about-me p, .projects p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-group a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 12px 24px;
+  background-color: #a83293;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-group a:hover {
+  background-color: #e000a4;
 }
