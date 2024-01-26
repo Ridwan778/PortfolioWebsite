@@ -1,129 +1,375 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="width=device-width, initial scale=1.0">
-    <meta name="viewport" content="width=device-width, initial scale=1.0">
-    <title>Ridwan's Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-</head>
-
-<body>
-    <header>
-        <h2 class="logo"><span>Ridwan.</span></h2>
-        <nav class="navigation">
-            <a href="./Resume(S M Ridwanul Haque).pdf">Resume</a>
-            <a href="#"class ='View-Projects'>Projects</a>
-            <a href="#"class ='View-Contacts'>Contacts</a>
-            <a href="#"class = View-Skills>Skills</a>
-        </nav>
-        <!-- <a href="#" class="btn-talk">Let's Talk</a> -->
-    </header>
-
-    <section class="about-me">
-        <div class="content">
-            <h2> <span>About Myself</span></h2>
-            <p>Hey there, a warm welcome to my corner of the web!  I'm currently in the final year of my computer science, with experience in front-end development and data visualization. 
-               When not coding, you'll find me immersed in chess strategies or playing arcade games.
-               Would love to hear about any opportunities in data science or software development!</p>
-            <div class="btn-group">
-                <!-- <a href="#">Resume</a>
-                <a href="#"class ='View-Projects'>Projects</a>
-                <a href="#"class ='Contacts'>Contacts</a>
-                <a href="#"class = Skills>Skills</a> -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ridwan's Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+        <div class="logo">Ridwan.</div>
+        <div>
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <nav id="hamburger-nav">
+        <div class="logo">Ridwan</div>
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-links">
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          </div>
+        </div>
+      </nav>
+      <section id="profile">
+        <div class="section__pic-container">
+          <img class = "profilePic" src="./assets/Digital Photo(Work Permit Final) copy.jpg" alt="S M Ridwanul Haque profile picture"/>
+        </div>
+        <div class="section__text">
+          <p class="section__text__p1">Hello, I'm</p>
+          <h1 class="title">Ridwan</h1>
+          <p class="section__text__p2">Software Developer</p>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2"
+              onclick="window.open('./assets/SMRidwanulHaqueResume.pdf')"
+            >
+              Download Resume
+            </button>
+            <!-- <button class="btn btn-color-1" onclick="location.href='./#contact'">
+              Contact Info
+            </button> -->
+          </div>
+          <div id="socials-container">
+            <img
+              src="./assets/linkedin.png"
+              alt="My LinkedIn profile"
+              class="icon"
+              onclick="location.href='https://www.linkedin.com/in/s-m-ridwanul-haque/'"
+            />
+            <img
+              src="./assets/github.png"
+              alt="My Github profile"
+              class="icon"
+              onclick="location.href='https://github.com/Ridwan778'"
+            />
+          </div>
+        </div>
+      </section>
+      <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+          <!-- <div class="section__pic-container">
+            <img
+              src="./assets/about-pic.png"
+              alt="Profile picture"
+              class="about-pic"
+            />
+          </div> -->
+          <div class="about-details-container">
+            <div class="about-containers">
+              <div class="details-container">
+                <img
+                  src="./assets/experience.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <h3>Experience</h3>
+                <p>2+ years <br />Software & Game Development</p>
+              </div>
+              <div class="details-container">
+                <img
+                  src="./assets/education.png"
+                  alt="Education icon"
+                  class="icon"
+                />
+                <h3>Education</h3>
+                <p>Bachelor of Science (B.Sc.) - Computer Science<br />4th Year</p>
+              </div>
             </div>
-        </div>
-    </section>
-
-    <h1 class = "project-header"> My Projects </h1>
-
-    <section class="projects">
-        <div class="content">
-            <h2><span>ChitChat</span></h2>
-            <p>Built a web-based chat application using React.js, focusing on creating a modular and reusable user interface through deconstruction 
-                into components. Ensured secure user authentication and cloud storage of user data by integrating Firebase, utilizing Auth REST API 
-                for authentication and Cloud Firestore REST API for data storage. Implemented asynchronous operations in JavaScript to handle real-time 
-                interactions within the application.</p>
-            <div class="btn-group">
-                <a href="https://github.com/Ridwan778/ChitChat"> View in Github</a>
+            <div class="text-container">
+              <p>
+                Hello! I'm Ridwan. 
+                I am currently in my final year of the undergraduate Computer Science program at Memorial University of Newfoundland. 
+                My passion for computer science stems from its unique ability to seamlessly blend logic and creativity, 
+                providing a platform for the expression of innovative ideas.</br>
+              </br>
+                Over the course of my academic journey, I have honed my programming skills and cultivated a deep interest 
+                in classic arcade games such as Flappy Bird, Breakout, Match-Up, and Can't Stop. 
+                This enthusiasm has driven me to build and develop these games, adding a practical dimension to my theoretical knowledge.</br>
+              </br>
+              I am currently developing a chat application called ChitChat with the goal of improving connectivity within my inner circle through the 
+              creation of a moreintimate space.
+              </p>
             </div>
+          </div>
         </div>
-    </section>
-
-    <section class="projects">
-        <div class="content">
-            <h2><span>Flappy Bird</span></h2>
-            <p>Designed and developed an entertaining Flappy Bird game using the Pygame module, a Python library dedicated to game development.
-                Through this project, I skillfully incorporated dynamic flight animations, adding a visually captivating layer to the gaming experience. 
-                Moreover, I implemented realistic game physics, enhancing the overall feel of the gameplay and ensuring that users are treated to an immersive and enjoyable challenge.</p>
-            <div class="btn-group">
-                <a href="https://github.com/Ridwan778/Flappy-Bird"> View in Github</a>
+        <!-- <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#experience'"
+        /> -->
+      </section>
+      <section id="experience">
+        <p class="section__text__p1"> Possess </p>
+        <h1 class="title">Skills</h1>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <!-- <h2 class="experience-sub-title">Languages</h2> -->
+              <div class="article-container">
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Python</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Java</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>C#</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>JavaScript</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>React</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Firebase</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Pandas</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Three.js</h3>
+                    <p>Beginner</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>C++</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+              </div>
             </div>
-        </div>
-    </section>
-
-    <section class="projects">
-        <div class="content">
-            <h2><span>Visualizing Food Price Hikes in Newfoundland</span></h2>
-            <p> Collected data from government websites about the constant rise in food prices for
-                Newfoundlanders during 2017-2022. Applied data processing methods to make it easier to visualize and showed
-                the final results in the form of a treemap using plotly library in python.
-            </p>
-            <div class="btn-group">
-                <a href="https://github.com/Ridwan778/Food-Price-Hike-Data-Visualisation"> View in Github</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="projects">
-        <div class="content">
-            <h2><span>Breakout</span></h2>
-            <p> Made a fun breakout game using HTML, CSS, and JavaScript.
-                The breakout game involved a paddle, ball, and bricks, 
-                and I implemented features like paddle movement, ball collisions, and score tracking.
-                I utilized HTML for structuring the game elements, CSS for styling and layout, 
-                and JavaScript for creating the game logic and interactivity.</p>
-            <div class="btn-group">
-                <a href="https://github.com/Ridwan778/Breakout-Game"> View in Github</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="projects">
-        <div class="content">
-            <h2><span>Food Review Analysis</span></h2>
-            <p> The project implemented the VADER Sentiment Analyzer from the NLTK package in Python to analyze user reviews, 
-                assigning sentiment scores through NLP methods. The study involved a comparison between the VADER scores and 
-                user ratings to evaluate the accuracy of the sentiment analysis tool. To enhance result visualization, a word cloud 
-                was employed for a more intuitive representation of the findings.</p>
-            <div class="btn-group">
-                <a href="https://github.com/Ridwan778/Food-Review-Analysis-NLP"> View in Github</a>
-            </div>
-        </div>
-    </section>
-
-    <section class = "contacts">
-        <div class="content">
-            <h2><span>Contacts</span></h2>
-            <p><a href = "https://www.linkedin.com/in/s-m-ridwanul-haque">LinkedIn</a></p>
-            <p><a href = "mailto: sridwanul@mun.ca ">Email</a></p>
-            <p>+1 647-212-2825</p>
-        </div>
-    </section>
-
-    <section class = "skills">
-        <div class="content">
-            <h2><span>Skills</span></h2>
-            <p>Programming Languages: Python, Javascript, Java, C#, and C++</p>
-            <p>Web Development: HTML, CSS, Three.js, and React</p>  
-            <p>Data Analysis and Visualization: Pandas, Sci-kit, Jupyter Notebooks and Git</p>
             
+          </div>
         </div>
-    </section>
-
-
-
-</body>
-
+        <!-- <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#projects'"
+        /> -->
+      </section>
+      <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/ChitChat2.png"
+                  alt="ChitCat Image"
+                  class="project-img"
+                  height = "100"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">ChitChat (In development)</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/Ridwan778/ChitChat'"
+                >
+                  Github
+                </button>
+                <!-- <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/'"
+                >
+                  Live Demo
+                </button> -->
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/Flappy.png"
+                  alt="Flappy Bird Image"
+                  class="project-img"
+                  height = 100
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Flappy Bird</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/Ridwan778/Flappy-Bird'"
+                >
+                  Github
+                </button>
+                <!-- <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/'"
+                >
+                  Live Demo
+                </button> -->
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/FoodPriceHikes.png"
+                  alt="Food Price Hikes Image"
+                  class="project-img"
+                  height = 100
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Food Price Hikes in NL</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/Ridwan778/Study-of-Food-Price-Hikes-in-Newfoundland'"
+                >
+                  Github
+                </button>
+                <!-- <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/'"
+                >
+                  Live Demo
+                </button> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#contact'"
+        /> -->
+      </section>
+      <section id="contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+          <div class="contact-info-container">
+            <img
+              src="./assets/email.png"
+              alt="Email icon"
+              class="icon contact-icon email-icon"
+            />
+            <p><a href="mailto:sridwanulh@mun.ca">sridwanulh@mun.ca</a></p>
+          </div>
+          <div class="contact-info-container">
+            <img
+              src="./assets/linkedin.png"
+              alt="LinkedIn icon"
+              class="icon contact-icon"
+            />
+            <p><a href="https://www.linkedin.com/in/s-m-ridwanul-haque/">LinkedIn</a></p>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <nav>
+          <div class="nav-links-container">
+            <ul class="nav-links">
+              <li><a href="#about">About</a></li>
+              <li><a href="#experience">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <!-- <p>Copyright &#169; 2023 S M Ridwanul Haque. All Rights Reserved.</p> -->
+      </footer>
+      <script src="main.js"></script>
+  </body>
 </html>
